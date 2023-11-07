@@ -37,31 +37,7 @@ import Foundation
 
 func partition<Element: Comparable>(input: inout Array<Element>,
                         pivot: Element) -> Int {
-    if input.count <= 0 { return 0}
-    
-    let start = 0
-    let end = input.count - 1
-    
-    var pivotIndex = start
-    while pivotIndex <= end {
-        if input[pivotIndex] == pivot { break }
-        pivotIndex += 1
-    }
-    
-    input.swapAt(pivotIndex, end)
-    
-    var pivot = input[end]
-    var i = start - 1
-    for index in start..<end {
-        if input[index] < pivot {
-            i += 1
-            input.swapAt(i, index)
-        }
-    }
-    
-    i += 1
-    input.swapAt(i, end)
-    return i
+    0
 }
 
 var test_1_array = [3, 2, 1]

@@ -48,40 +48,7 @@ import Foundation
 //
 
 func permutations<Element: Comparable>(input: [Element]) -> [[Element]] {
-    func helper(result: inout [[Element]], list: inout [Element], visited: inout [Bool], elements: [Element]) {
-        if list.count == elements.count {
-            result.append(list)
-            return
-        }
-        for index in elements.indices {
-            if visited[index] {
-                continue
-            }
-            if index > 0, !visited[index - 1], elements[index] == elements[index - 1] {
-                continue
-            }
-            list.append(elements[index])
-            visited[index] = true
-            helper(result: &result,
-                list: &list,
-                visited: &visited,
-                elements: elements)
-
-            list.removeLast()
-            visited[index] = false
-        }
-    }
-    
-    var result = [[Element]]()
-    var list = [Element]()
-    let elements = input.sorted()
-    var visited = [Bool](repeating: false, count: elements.count)
-    
-    helper(result: &result,
-           list: &list,
-           visited: &visited,
-           elements: elements)
-    return result
+    []
 }
 
 let test_1_array = [1, 2, 3]

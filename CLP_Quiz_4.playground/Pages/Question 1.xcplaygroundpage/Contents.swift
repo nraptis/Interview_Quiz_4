@@ -1,5 +1,8 @@
 import Foundation
 
+// NOTE: There are 4 pages in this playground.
+// There are a total of 4 questions, each on a separate page.
+
 // You are given 2 sorted arrays of comparables, a and b.
 
 // Write a function which merges a and b into 1 sorted array.
@@ -33,32 +36,7 @@ import Foundation
 // ============================
 
 func merge<Element: Comparable>(a: [Element], b: [Element]) -> [Element] {
-    
-    var result = [Element]()
-    
-    var indexA = 0
-    var indexB = 0
-    while indexA < a.count && indexB < b.count {
-        if a[indexA] < b[indexB] {
-            result.append(a[indexA])
-            indexA += 1
-        } else {
-            result.append(b[indexB])
-            indexB += 1
-        }
-    }
-    
-    while indexA < a.count {
-        result.append(a[indexA])
-        indexA += 1
-    }
-    
-    while indexB < b.count {
-        result.append(b[indexB])
-        indexB += 1
-    }
-    
-    return result
+    []
 }
 
 let test_1_a = [1, 3, 5]
